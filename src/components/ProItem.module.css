@@ -1,0 +1,60 @@
+.cardImg{
+    width: 100%;
+    height: 200px;
+}
+
+.cardcontent{
+    padding:0 0 !important;
+    position: relative;
+}
+
+.cardImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.card{
+    margin-top: 32px;
+}
+
+.content{
+    margin-top: 32px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.heading{
+ align-self: center;
+ font-weight: bold;
+ color: #7b7b7b;
+}
+
+.qty{
+    width:60px;
+}
+
+.action{
+    padding: 10px 15px;
+   
+    position: absolute !important;
+    top: 160px;
+    right: 0px;
+}
+
+.roundBtn{
+    background-color: #dadada !important;
+    
+}
+
+.price{
+    padding: 10px 15px;
+    background-color: #dedede;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    color: #000;
+}

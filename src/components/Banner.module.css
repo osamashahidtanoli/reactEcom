@@ -1,0 +1,35 @@
+.banner{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height:91vh;
+    
+    overflow-x: hidden;
+}
+
+.banner .bannerImage{
+    background-image: url('../img/car.jpg');
+    background-repeat: no-repeat;
+    background-position: center -680px;
+    background-size: cover;
+    height: 100%;
+}
+
+.banner .bannerText{
+    background-color: #1d1d1d;
+    
+}
+
+.bannerInner{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.typoColor{
+    color: #fff;
+    font-weight: bold !important;
+    margin-bottom: 16px !important;
+    
+}
