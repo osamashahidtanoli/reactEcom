@@ -22,3 +22,12 @@
 body {
   font-family: "Metropolis-regular" !important;
 }
+
+.MuiBadge-badge{
+  background-color: #cccccc;
+  top: 10px;
+}
+
+.MuiBadge-anchorOriginTopRightRectangle{
+  top: 10px !important;
+}

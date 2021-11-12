@@ -1,0 +1,18 @@
+.table{
+    margin-top: 32px;
+}
+
+.noItems{
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    width: 100%;
+}
+
+.table thead{
+    background: #eeeded !important;
+}
+
+.table thead tr th{
+    font-weight: bold;
+}

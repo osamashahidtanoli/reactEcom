@@ -10,14 +10,14 @@ import {
 import CartIcon from "@material-ui/icons/ShoppingCart";
 import CloseIcon from "@material-ui/icons/Close";
 import { useState, Fragment } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { productAction } from "../store/product-cart";
 
 const ProItem = ({ item }) => {
   const [qty, setQty] = useState(1);
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.product.cart);
+
   const { id, name, img, price } = item;
   const onAddToCart = () => {
     dispatch(
@@ -26,12 +26,20 @@ const ProItem = ({ item }) => {
         qty,
       })
     );
-    console.log(cart);
+    // console.log(cart);
+
     setOpen(true);
   };
   const qtyChangeHandler = (event) => {
     setQty(event.target.value);
   };
+
+  // useEffect(() => {
+  //   const newArray = [...cart];
+  //  const cl = newArray.map(c => c.qty)
+  //  const totalCl = cl.reduce((sum , current) =>  sum + current , 0)
+  //  console.log(totalCl);
+  // }, [cart]);
 
   const handleClose = (event, reason) => {
     setOpen(false);
@@ -58,7 +66,7 @@ const ProItem = ({ item }) => {
       <Card className={classes.card}>
         <CardContent className={classes.cardcontent}>
           <div className={classes.cardImg}>
-            <img alt='img' src={`../img/${img}.jpg`} />
+            <img alt="img" src={`../img/${img}.jpg`} />
           </div>
           <div className={classes.price}>
             <span>$ {price}</span>

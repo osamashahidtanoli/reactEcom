@@ -26,7 +26,8 @@ const productSlice = createSlice({
         qty: 0
       },
     ],
-    cart: []
+    cart: [],
+    totalItem: 0,
   },
   reducers: {
     addToCart(state, action) {
@@ -39,14 +40,15 @@ const productSlice = createSlice({
             state.cart.push({
                ...findProduct,
                qty: numberQty,
-               price: findProduct.price * numberQty,
+               totalPrice: findProduct.price * numberQty,
             });
         }
         else{
              cartFind.qty =  numberQty;
-             cartFind.price = findProduct.price * cartFind.qty;
+             cartFind.totalPrice = findProduct.price * cartFind.qty;
         }
-      
+        state.totalItem = state.cart.length;
+        
     },
   },
 });
